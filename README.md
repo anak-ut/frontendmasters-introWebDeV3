@@ -1,3 +1,3 @@
 akses web langsungnya di : 
 
-![link](bit.ly/webdev-v3)
+[link](bit.ly/webdev-v3)
