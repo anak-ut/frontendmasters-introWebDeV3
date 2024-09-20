@@ -60,3 +60,28 @@ direct styling into tags.
 
 DON'T
 */
+
+/* 
+-cascade rules-
+
+urutan rules styling
+
+- 2 rules yang sama spesifik, akan
+diambil rules yg terakhir (terbawah)
+*/
+
+
+.cascade {
+    color: red;
+}
+
+.cascade {
+    color: green;
+}
+
+/* 
+rules diatas konflik.
+the winner is the last rules
+color -> green 
+
+*/
