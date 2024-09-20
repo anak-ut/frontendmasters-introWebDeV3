@@ -85,3 +85,26 @@ the winner is the last rules
 color -> green 
 
 */
+
+
+.two-class {
+ color: yellow;
+}
+
+.two-class.also2class {
+ color: rgb(228, 153, 41);
+}
+
+/*
+rules diatas :
+
+1 class vs 2 class
+winner : 2 class karna
+lebih spesifik
+nb : 
+
+selector -> .class1.class2
+tidak dipisah spasi,tapi sambung
+kalau dispasi, beda arti
+menjadi &
+*/
