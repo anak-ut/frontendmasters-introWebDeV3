@@ -105,6 +105,36 @@ nb :
 
 selector -> .class1.class2
 tidak dipisah spasi,tapi sambung
-kalau dispasi, beda arti
-menjadi &
+kalau dispasi, beda arti.
+*/
+
+/*
+selector tag vs class
+
+winner : class (lbh spesifik)
+*/
+
+.username {
+    color: aqua;
+}
+
+.username.name.fullname{
+    color: bisque;
+}
+
+/*
+rumus hitung spesifik selector::after
+dumbways-
+
+scores:
+
+class = 10,
+tag = 1
+
+pada case diatas
+.username scores = 10
+.username.name.fullname = 30
+
+winner -> color: bisque
+
 */
