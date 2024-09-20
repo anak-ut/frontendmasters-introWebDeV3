@@ -13,3 +13,41 @@ fun fact : ada sekitar 350 properties css
 h1 {
     color: rgb(32, 35, 221);
 }
+
+h2 {
+    font-size: 13vh;
+    border: 1px green solid;
+    border-radius: 12px 12px;
+    text-decoration: overline blue dashed;
+}
+
+ul {
+    list-style: square;
+}
+
+.branding {
+    color: red;
+}
+
+.desc {
+    color: blue;
+}
+
+/* 
+naming class:   
+penamaannya disarankan 'what they are'
+not
+' what they looked'
+misal. ada class='branding',
+jika di suatu waktu kita ingin merubah value
+dari branding maka kita tinggal ubah valuenya.
+sedangkan jika kita pakai nama class
+'what they looked', misal red-branding = red,
+suatu saat branding ganti warna biru,
+tentu akan merepotkan ganti value biru dan
+nama class jadi blue-branding.
+bayangkan itu ada di 1000 baris code mu.
+
+lebih aman basic naming class
+'what they are '
+*/
