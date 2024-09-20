@@ -1,0 +1,15 @@
+/* 
+CSS rules : 
+
+ ini contoh selector
+ membuat semua elemen h1 jadi warna merah
+ red adalah value 
+membuat semua elemen h1 jadi warna merah.
+color adalah properti.
+fun fact : ada sekitar 350 properties css
+
+*/
+
+h1 {
+    color: rgb(32, 35, 221);
+}
