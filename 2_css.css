@@ -172,3 +172,15 @@ dan nama pseudo classnya
     background-color: rgb(48, 233, 88);
     color: white;
 }
+
+/*
+--- pseudo element ---
+
+seperti pseudo class, tetapi titik dua dobel (::) 
+lebih ke insert atau sisip informasi
+kayak manipulasi DOM ? ya dan tidak. terlihat seperti itu
+tetapi pseudo element tidak merubah struktur HTML .
+*/
+.hovver::after {
+    content: 'sigma';
+}
