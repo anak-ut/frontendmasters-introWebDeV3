@@ -157,6 +157,18 @@ sangat sangat sangat
 baiknya dihindari pake !important
 */
 
-/* materi selanjutnya
-pseudo classes
+/* 
+--Pseudo classes--
+mirip seperti fungsi (state/kondisi)
+diletakkan setelah nama class diikuti titik 2 (:) 
+dan nama pseudo classnya
+
 */
+
+.hovver {
+    border: 1px yellowgreen solid;
+}
+.hovver:hover {
+    background-color: rgb(48, 233, 88);
+    color: white;
+}
