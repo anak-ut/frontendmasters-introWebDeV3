@@ -184,3 +184,9 @@ tetapi pseudo element tidak merubah struktur HTML .
 .hovver::after {
     content: 'sigma';
 }
+
+/* starting box model*/
+/*
+-- CSS Box Model ---
+
+*/
