@@ -209,3 +209,21 @@ lebih baik pake cara lain yang lebih mudah seperti flex dan grid.
 
 */
 
+/*
+    pakai box-sizing : border-box;
+    ke semua element pake wildcard 
+    set di awal css mu (line paling atas)
+
+    disarankan biar enak hidupmu wkwk
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+kita coba layouting pake flex
+kenapa ga grid ? well grid terhitung masih baru
+belum terlalu bnyak support ke semua browser.
+
+*/
