@@ -190,3 +190,12 @@ tetapi pseudo element tidak merubah struktur HTML .
 -- CSS Box Model ---
 
 */
+.boks {
+    border: 2px solid blue;
+    background-color: aliceblue;
+    width: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: left;
+}
