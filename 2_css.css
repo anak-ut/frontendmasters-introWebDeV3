@@ -198,4 +198,14 @@ tetapi pseudo element tidak merubah struktur HTML .
     justify-content: center;
     display: flex;
     float: left;
+    margin: 2vh;
+    border-radius: 20px;
+    padding: 10px;
 }
+
+/*
+layout menggunakan display flex ini bikin pusing dan banyak anomali.
+lebih baik pake cara lain yang lebih mudah seperti flex dan grid.
+
+*/
+
