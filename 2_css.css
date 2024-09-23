@@ -345,3 +345,18 @@ dari total width tersisa
   /* 
   next : css animation 
   */
+
+  @keyframes mual {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(350deg);
+    }
+  }
+
+  .spin-boy {
+    animation: mual 1.5s infinite ease;
+    display: inline-block;
+    font-size: 30px;
+  }
