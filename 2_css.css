@@ -280,3 +280,64 @@ dari total width tersisa
   ---Learning grid ---
   
   */
+  .kontener {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .grid {
+    border: 1px solid black;
+    width: 60px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .grid1 {
+    background-color: beige;
+  }
+  .grid2 {
+    background-color: aquamarine;
+  }
+  .grid3 {
+    background-color: blue;
+  }
+  .grid4 {
+    background-color: cadetblue;
+  }
+
+  /* 
+  kita pakai grid templating 
+  */
+
+  .kontener1 {
+    display: grid;
+    grid-template-areas:
+    "nav-header nav-header nav-header nav-side"
+    "main-body main-body . nav-side"
+    "footer footer footer footer" ;
+  }
+
+
+  .grids1{
+    grid-area: nav-header;
+    background-color: red;
+    padding: 10px;
+  }
+
+  .grids2 {
+    grid-area: main-body;
+    background-color: blue;
+    padding: 10px;
+  }
+
+  .grids3 {
+    grid-area: nav-side;
+    background-color: greenyellow;
+    padding: 10px;
+  }
+
+  .grids4 {
+    grid-area: footer;
+    background-color: yellow;
+    padding: 10px;
+  }
