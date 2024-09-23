@@ -313,7 +313,7 @@ dari total width tersisa
     display: grid;
     grid-template-areas:
     "nav-header nav-header nav-header nav-header"
-    "main-body main-body main-body nav-side"
+    "main-body main-body . nav-side"
     "footer footer footer footer" ;
   }
 
