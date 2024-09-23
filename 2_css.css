@@ -360,3 +360,61 @@ dari total width tersisa
     display: inline-block;
     font-size: 30px;
   }
+
+  /* animasi mobil*/
+
+  @keyframes move {
+    to {
+      translate: 50px;
+    }
+  }
+
+  .car {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    right: 0;
+    animation: move 1s infinite alternate;
+  }
+
+  /*
+  animation : move 1s infinite alternative;
+
+ is shorthand from 
+ 
+ animation-name: move;
+ animation-duration: 1s;
+ animation-iteration-count: infinite;
+ animation-direction: alternative
+ */
+.car-list {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.linear {
+  
+  animation-timing-function: linear;
+}
+
+.ease {
+  animation-timing-function: ease;
+}
+
+.ease-in {
+  animation-timing-function: ease-in;
+}
+
+.ease-out {
+  animation-timing-function: ease-out;
+}
+
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+.cubic-bezier {
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* next : rainbow text */
