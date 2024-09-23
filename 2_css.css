@@ -312,8 +312,8 @@ dari total width tersisa
   .kontener1 {
     display: grid;
     grid-template-areas:
-    "nav-header nav-header nav-header nav-side"
-    "main-body main-body . nav-side"
+    "nav-header nav-header nav-header nav-header"
+    "main-body main-body main-body nav-side"
     "footer footer footer footer" ;
   }
 
