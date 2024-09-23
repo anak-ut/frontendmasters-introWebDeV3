@@ -392,7 +392,11 @@ dari total width tersisa
   max-width: 400px;
   position: relative;
 }
+/*
+animation-timing-function atau disebut sbg easing
 
+adalah beberapa perubahan animasi berdasar perubahan waktu
+*/
 .linear {
   
   animation-timing-function: linear;
@@ -417,4 +421,43 @@ dari total width tersisa
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-/* next : rainbow text */
+/* next : rainbow text 
+
+mari bikin teks yang ganti-ganti warna
+*/
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: aqua;
+  }
+  20% {
+    color: aliceblue;
+  }
+  30% {
+    color: aquamarine;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: ghostwhite;
+  }
+  60% {
+    color: brown;
+  }
+  70% {
+    color: yellow;
+  }
+  80% {
+    color: burlywood;
+  }
+  90% {
+    color: rebeccapurple;
+  }
+}
+
+.teks-rainbow {
+  animation: rainbow 3s infinite linear;
+  font-size: 60px;
+}
