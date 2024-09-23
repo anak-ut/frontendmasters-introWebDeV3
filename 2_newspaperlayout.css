@@ -15,6 +15,7 @@ body {
     font-size: 60px;
     text-align: center;
     font-family: "Jacquarda Bastarda 9";
+    margin: 10px 0 60px 0;
 }
 .navigation {
     grid-area: navigation;
