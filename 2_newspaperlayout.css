@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFBE6;
+}
+
+
+/*pake grid*/
+
+.header {
+    grid-area: header;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    font-family: "Jacquarda Bastarda 9";
+}
+.navigation {
+    grid-area: navigation;
+}
+.navitems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid black;
+    margin: 0;
+    padding: 30px;
+}
+li {
+    font-size: 22px;
+}
+li:hover{
+    color: aqua;
+    cursor: pointer;
+}
+.navitems {
+    list-style-type: none;
+}
+
+.story {
+   border-left: 3px solid black;
+   border-bottom: 3px solid black;
+
+}
+
+.story3, .story5 {
+    border-right: 3px solid black;
+}
+.story1 {
+    grid-area: story1;
+}
+.story2 {
+    grid-area: story2;
+}
+.story3 {
+    grid-area: story3;
+}
+.story4 {
+    grid-area: story4;
+}
+.story5 {
+    grid-area: story5;
+}
+
+.page {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "navigation navigation navigation"
+    "story1 story2 story3"
+    "story4 story5 story5" ;
+}
+
+img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    max-height: 250px;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+}
