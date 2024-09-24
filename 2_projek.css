@@ -34,37 +34,64 @@ p,h1,h2,h3 {
 
 
 /* ---------------------page----------------------- */
-.page {
-    border: 1px solid black;
-    display: grid;
-    grid-template-areas: "item bayar"
-    "rincian rincian" ;
-}
+
 
 .item {
-    border: 1px solid black;
     grid-area: item;
+    background-color: #EEE1D5;
+    margin: 10px;
+}
+.bayar {
+    grid-area: bayar;
+    margin: 10px;
 }
 .nama {
-    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: #EEE1D5;
+    padding-left: 10px;
 }
 .method {
-    border: 1px solid black;
+    margin-top: 10px;
+    background-color: #EEE1D5;
+    padding-left: 10px;
+
 }
 
-.bayar {
-    border: 1px solid black;
-    grid-area: bayar;
-}
 
 .rincian {
-    border: 1px solid black;
     grid-area: rincian;
 }
 /* --------------------------------------------------- */
 
 /* -------------------grid setting-------------------------- */
-
-
+.page {
+    display: grid;
+    grid-template-areas: 
+    "item bayar"
+    "rincian rincian" ;
+    grid-template-columns: 1fr 1fr;
+}
 
 /* --------------------------------------------------------- */
+
+/* ----------------- input ---------------------*/
+
+.hover {
+    color: red;
+    position: absolute;
+    left: 18px;
+    top: -30px;
+    padding: 0 2px;
+    background-color: #EEE1D5;
+}
+.grup {
+    position: relative;
+    padding-bottom: 20px;
+}
+input {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 8px;
+    background-color: #EEE1D5;
+}
+/* ---------------------------------------------------- */
