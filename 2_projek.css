@@ -1,6 +1,19 @@
-* {
+/* ---------------css reset--------------------- */
+html {
     box-sizing: border-box;
+    margin: 0;
 }
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+p {
+    line-height: 1.5;
+    hyphens: auto;
+}
+p,h1,h2,h3 {
+    overflow-wrap: break-word;
+}
+/* ---------------------header----------------------- */
 .logo-txt {
     color: #FBF2C0;
     font-size: 50px;
@@ -17,3 +30,41 @@
     width: 60px;
     margin-right: 15px;
 }
+/* ---------------------------------------------------- */
+
+
+/* ---------------------page----------------------- */
+.page {
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: "item bayar"
+    "rincian rincian" ;
+}
+
+.item {
+    border: 1px solid black;
+    grid-area: item;
+}
+.nama {
+    border: 1px solid black;
+}
+.method {
+    border: 1px solid black;
+}
+
+.bayar {
+    border: 1px solid black;
+    grid-area: bayar;
+}
+
+.rincian {
+    border: 1px solid black;
+    grid-area: rincian;
+}
+/* --------------------------------------------------- */
+
+/* -------------------grid setting-------------------------- */
+
+
+
+/* --------------------------------------------------------- */
