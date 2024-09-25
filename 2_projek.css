@@ -9,10 +9,14 @@ html {
 p {
     line-height: 1.5;
     hyphens: auto;
+    color: #f5a65d;
 }
 p,h1,h2,h3 {
     overflow-wrap: break-word;
 }
+
+/* -------------------------------------------------- */
+
 /* ---------------------header----------------------- */
 .logo-txt {
     color: #FBF2C0;
@@ -39,33 +43,44 @@ p,h1,h2,h3 {
 .item {
     grid-area: item;
     background-color: #EEE1D5;
-    margin: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 .bayar {
     grid-area: bayar;
-    margin: 10px;
 }
 .nama {
     margin-bottom: 10px;
     background-color: #EEE1D5;
-    padding-left: 10px;
+    padding: 30px;
+    border-radius: 10px;
+
 }
 .method {
-    margin-top: 10px;
+    /* margin-bottom: 10px; */
     background-color: #EEE1D5;
-    padding-left: 10px;
-
+    padding: 30px;
+    border-radius: 10px;
 }
 
-
+li {
+    list-style: none;
+    border-bottom: 1px solid red;
+}
 .rincian {
     grid-area: rincian;
+    text-align: center;
 }
 /* --------------------------------------------------- */
 
 /* -------------------grid setting-------------------------- */
 .page {
+    width: 100%;
+    padding: 30px;
     display: grid;
+    row-gap: 10px;
+    column-gap: 30px;
     grid-template-areas: 
     "item bayar"
     "rincian rincian" ;
@@ -77,7 +92,6 @@ p,h1,h2,h3 {
 /* ----------------- input ---------------------*/
 
 .hover {
-    color: red;
     position: absolute;
     left: 18px;
     top: -30px;
@@ -95,3 +109,13 @@ input {
     background-color: #EEE1D5;
 }
 /* ---------------------------------------------------- */
+
+/* ---------- hitungan part ----------*/
+
+
+button {
+    background-color: #f6fa0d;
+    border-radius: 10px;
+    border:none
+}
+/* ---------------------------------- */
