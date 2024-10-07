@@ -74,9 +74,20 @@ for (let i=10;i>1;i--){
 
 // --- Function
 // a bit reusable code
+// template juga
 
 function addTwo(number){
     return number +2;
 }
 let answer = addTwo(0);
 console.log(answer);
+
+let kec = 'peudawa';
+let kab = 'aceh timur';
+let prov = 'aceh';
+
+function mentionLokasi(l1,l2,l3){
+    console.log(`saya tinggal di ${l1},${l2}, provinsi ${l3}`);
+}
+
+mentionLokasi(kec,kab,prov); // tidak usah console.log lagi karna di dalam fungsi sudah ada
