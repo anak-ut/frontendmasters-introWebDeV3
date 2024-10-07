@@ -54,3 +54,19 @@ if (friendsAtParty ===0){
 } else {
     console.log('idupin myusikkkkkk ~')
 }
+
+// Loops
+// while loop
+
+let mobil = 0;
+while (mobil <12){
+    console.log(`mobil ke ${mobil}`);
+    mobil++;
+}
+
+// for loop
+let gerobak = 10;
+for (let i=10;i>1;i--){
+    gerobak--;
+    console.log(`gerobak ke- ${gerobak}`)
+}
