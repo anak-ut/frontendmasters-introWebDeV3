@@ -70,3 +70,13 @@ for (let i=10;i>1;i--){
     gerobak--;
     console.log(`gerobak ke- ${gerobak}`)
 }
+
+
+// --- Function
+// a bit reusable code
+
+function addTwo(number){
+    return number +2;
+}
+let answer = addTwo(0);
+console.log(answer);
