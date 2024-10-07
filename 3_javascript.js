@@ -45,3 +45,12 @@ if (isSkyBlue){
     console.log('ngowaor rek');
 }
 
+const friendsAtParty = 3                                                   ;
+
+if (friendsAtParty ===0){
+    console.log('look i owe my own nachos');
+} else if (friendsAtParty <= 4){
+    console.log('pas dapet nasi brkat aja');
+} else {
+    console.log('idupin myusikkkkkk ~')
+}
