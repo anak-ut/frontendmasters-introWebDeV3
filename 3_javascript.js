@@ -91,3 +91,28 @@ function mentionLokasi(l1,l2,l3){
 }
 
 mentionLokasi(kec,kab,prov); // tidak usah console.log lagi karna di dalam fungsi sudah ada
+
+// cara nulis function
+
+// #1 fungsi biasa- declaration function
+function meong(){
+    console.log(' miau miau miau miauuuuu');
+}
+meong();
+
+// #2 fungsi tanpa nama- express function
+// anonimus tanpa membuat nama fungsi
+// fungsi tanpa nama td dmasukkan ke dalam variabel
+let petok = function(){
+    console.log('tok petok petok');
+}
+petok();
+
+// #3 arrow function
+// seperti express funct tapi pake arrow dan hapus keyword function
+// step : hapus keyword 'function', tambahkan panah => setelah parameter
+let gukguk = ()=> {
+    console.log('guk guk');
+}
+
+gukguk();
