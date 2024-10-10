@@ -154,5 +154,16 @@ function sayHalo(){
 // automatically kita bisa panggil fungsi sblm fungsi dideklare
 
 
-// --- Builtins
+// --- Built-ins
 // lots of function yang sudah ada di dalam javascript(js machine)
+
+// contoh:
+const kalimats = 'ThIs HaS weiRd CaSiNg On It';
+const toLower = kalimats.toLowerCase();
+const toUpper = kalimats.toUpperCase();
+console.log(toLower);
+console.log(toUpper);
+
+let numberss = 1234.543452
+let result = Math.round(numberss)
+console.log(result)
