@@ -128,4 +128,31 @@ function addFive(number){
 }
 
 console.log(addFive(1));
-console.log(someVar);
+// console.log(someVar); // error not define - di dalam curly brace
+// { } adalah scope
+
+// panggil variabel sblm deklare, sebabkan error
+
+/*
+
+console.log(here);
+let here = 'disini : idn'
+
+*/
+
+// referenceError
+// tetapi tidak berlaku ke fungsi(biasa),
+// keganjilan ini disebut hoisting
+
+// hoisting
+
+sayHalo();
+function sayHalo(){
+    console.log('halo halooo')
+}
+
+// automatically kita bisa panggil fungsi sblm fungsi dideklare
+
+
+// --- Builtins
+// lots of function yang sudah ada di dalam javascript(js machine)
