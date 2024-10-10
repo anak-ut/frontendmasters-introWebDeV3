@@ -94,6 +94,7 @@ mentionLokasi(kec,kab,prov); // tidak usah console.log lagi karna di dalam fungs
 
 // cara nulis function
 
+
 // #1 fungsi biasa- declaration function
 function meong(){
     console.log(' miau miau miau miauuuuu');
@@ -116,3 +117,15 @@ let gukguk = ()=> {
 }
 
 gukguk();
+
+// --- Scope
+
+// contoh:
+function addFive(number){
+    const someVar = 'you cannot see this outside this funct';
+    console.log(someVar);
+    return number + 5;
+}
+
+console.log(addFive(1));
+console.log(someVar);
