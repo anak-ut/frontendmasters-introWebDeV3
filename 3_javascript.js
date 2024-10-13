@@ -167,3 +167,113 @@ console.log(toUpper);
 let numberss = 1234.543452
 let result = Math.round(numberss)
 console.log(result)
+
+
+// --- objects
+
+// bunch of data collection
+const personss = {
+    nama: 'brian',
+    city: 'seattle',
+    favFood: 'tacho',
+    age: 6900
+};
+
+let namaKu = 'nama'
+
+console.log(personss);
+console.log(personss.nama); //cara 1
+console.log(personss['nama']); //cara 2
+console.log(personss[namaKu]); //cara 2 - acessor pake variabel bukan key
+// nb: key is unique, value enggak
+
+let person1 = {
+    nan: 'angie',
+    ageRange: '25-33'
+};
+
+let person2 = {
+    nan: 'fransesc',
+    ageRange: '65-77'
+};
+
+function suggestMusic(people){
+    if (people.ageRange == '25-33'){
+        console.log('musikmu adalah keroncong solo')
+    } else if (people.ageRange == '40-48'){
+        console.log('musik yang cocok utk mu adalah syair')
+    } else {
+        console.log('cocok mendem pake lagu senja')
+    }
+}
+
+suggestMusic(person1);
+suggestMusic(person2);
+
+// objek juga bisa punya fungsi mreka sendiri
+
+const dog = {
+    name: 'lulabi',
+    speak(){
+        console.log('guk guk gukk');
+    },
+    shout: function shout(){
+        console.log('grrrrrrr wook !');
+    }
+};
+dog.speak();
+dog.shout();
+
+// nested object
+
+const saya = {
+    nama: {
+        depan: 'mulyono',
+        belakang: 'tolo7'
+    },
+    lokasi: {
+        lahir: 'solo',
+        dom: 'kajarta'
+    }
+};
+
+console.log(saya.nama.belakang);
+console.log(saya.lokasi.dom);
+console.log(saya);
+console.log(saya.nama);
+
+//nb : console adalah objek yang berisi banyak fungsi. kamu bisa console si console
+console.log(console);
+console.log(Math);
+
+
+
+// ---Context
+
+const dataPresiden = {
+    nama: {
+        lama: 'mulyono',
+        baru: 'jokowow'
+    },
+    karir: {
+        awal: 'gubernur single',
+        penting: 'gubernur kajarta',
+        now: 'presiden okinawa'
+    },
+    getBio(){
+        return ` ${this.nama.lama} pernah jadi ${this.karir.awal} dan sekarang adalah ${this.karir.now}` //this refers ke objek sekarang
+    }
+};
+
+console.log(dataPresiden.getBio())
+// mari kita break this nya hehe
+const testGetAddress = dataPresiden.getBio();
+console.log(testGetAddress);
+// const thisAddres = this.getBio(); // not function karna refers ke windos
+
+// this hanya bisa dipakai dalam konteks saat di dalam objek.
+// jika diluar itu maka yang terpanggil adalah window
+
+console.log(this === global); // window pada node
+console.log(this.scrollY); //  ga work karna di terminal. coba di console browser
+// console.log(window.scrollY); //  ga work karna pakai node
