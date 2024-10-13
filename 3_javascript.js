@@ -322,7 +322,9 @@ console.log(taruhan);
 // selain cetak hari per indeks pakai for loop
 // kita coba pakai forEach
 
-days.forEach(day => {
-    console.log(day);
+days.forEach(day => { // forEach adalah fungsi
+    console.log(`day-${day}`);
 }
 );
+
+// --- intro web finished --- //
