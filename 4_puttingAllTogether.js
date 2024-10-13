@@ -29,4 +29,6 @@ let targetJS = document.querySelectorAll('.target');
 for (let i=0;i<targetJS.length;i++){
     let elementNow = targetJS[i];
     elementNow.innerText = 'koniciwa dengan javascript'; 
-}
+};
+
+// --- Adding events dan listeners
