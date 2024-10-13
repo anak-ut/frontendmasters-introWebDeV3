@@ -8,3 +8,25 @@
 let redSquare = document.querySelector('.red-square');
 
 redSquare.style.backgroundColor = 'blue';
+
+// penjelasan :
+/*
+dengan document, kta bisa panggil dengan method utk berinteraksi dengan html dan css
+
+document = variabel browser yang ada secara global
+
+fakta unik :
+(js camelcase) VS (css kebabcase)
+apapun properti di css kebabcase maka di javascript dipanggil menjadi camelcase
+
+contoh:
+
+background-color (css) --> backgroundColor (js) 
+*/
+
+// contoh lain- pake innerText
+let targetJS = document.querySelectorAll('.target');
+for (let i=0;i<targetJS.length;i++){
+    let elementNow = targetJS[i];
+    elementNow.innerText = 'koniciwa dengan javascript'; 
+}
