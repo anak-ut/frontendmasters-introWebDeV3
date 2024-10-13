@@ -281,3 +281,40 @@ console.log(this.scrollY); //  ga work karna di terminal. coba di console browse
 
 // --- Arrays
 
+const days = [
+    'monday',
+    'tuesday',
+    'wednesday',
+    'thursday',
+    'friday',
+    'saturday'
+];
+
+// arrays punya banyak method. antara lain length dan join
+for (let i=0;i<days.length;i++){
+    console.log(days[i]);
+};
+
+console.log(days.join('-'));
+
+// another method in arrays. push() dan pop()
+// push dan pop melakukan operasi array di ujung array
+const taruhan = [
+    {nama: 'muldoko', bid: 10000},
+    {nama: 'santoso', bid: 2200},
+    {nama: 'luhut', bid: 7200}
+];
+
+// kita ingin tambah peserta baru: jodi, 22300
+taruhan.push({nama: 'jordi', bid:22300});
+console.log(taruhan);
+console.log(taruhan.length);
+
+// misal luhut ingin menaikkan bid ke 2000000;
+
+taruhan[2].bid=2000000;
+console.log(taruhan);
+
+// method lagi pop() dan shift() unshift()
+//operasi shift unshift melakukan operasi di bagian depan aaray
+``
