@@ -292,7 +292,7 @@ const days = [
 
 // arrays punya banyak method. antara lain length dan join
 for (let i=0;i<days.length;i++){
-    console.log(days[i]);
+    console.log(i, days[i]);
 };
 
 console.log(days.join('-'));
@@ -317,4 +317,12 @@ console.log(taruhan);
 
 // method lagi pop() dan shift() unshift()
 //operasi shift unshift melakukan operasi di bagian depan aaray
-``
+
+// kita pakai contoh array days
+// selain cetak hari per indeks pakai for loop
+// kita coba pakai forEach
+
+days.forEach(day => {
+    console.log(day);
+}
+);
