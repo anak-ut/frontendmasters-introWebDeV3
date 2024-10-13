@@ -277,3 +277,7 @@ console.log(testGetAddress);
 console.log(this === global); // window pada node
 console.log(this.scrollY); //  ga work karna di terminal. coba di console browser
 // console.log(window.scrollY); //  ga work karna pakai node
+
+
+// --- Arrays
+
