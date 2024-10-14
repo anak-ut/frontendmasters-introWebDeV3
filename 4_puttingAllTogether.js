@@ -36,3 +36,32 @@ for (let i=0;i<targetJS.length;i++){
 };
 
 // --- Adding events dan listeners
+
+// pada interaksi web, kita menunggu user utk bertindak sesuatu. 
+// tindakan tsb = event
+
+// contoh : event mouse
+let tombol = document.querySelector('.tombol');
+// kita tambah listener
+tombol.addEventListener('click',function(){
+    let timeStamp = Date.now();
+    //let minuteStamp = timeStamp.getMinutes()
+    let convertMinutes = 1000*60;
+    console.log('yehehe', timeStamp/convertMinutes);
+})
+
+// contoh event: type
+let typingbar = document.querySelector('.typingbar');
+let display = document.querySelector('.display');
+typingbar.addEventListener('keyup', function(){
+    display.innerText = typingbar.value;
+})
+
+// change square color part 2
+let kotak = document.querySelector('.square');
+let typecolor = document.querySelector('.type-color');
+
+typecolor.addEventListener('keyup', function(){
+    kotak.style.backgroundColor = typecolor.value;
+})
+
