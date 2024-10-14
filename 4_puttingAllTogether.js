@@ -65,3 +65,12 @@ typecolor.addEventListener('keyup', function(){
     kotak.style.backgroundColor = typecolor.value;
 })
 
+// --- event delegation
+
+// daripada menaruh listener di tiap tiap element, taruh saja di parentnya
+// event bubblin : ketika event mengenai elemen, dia akan merambat naik ke parent, ke parent diatasnya lagi, dan sampai ke elemen utama(root)
+let kontainerBtn = document.querySelector('.kontainer-button');
+let displayBtn = document.querySelector('.display-btn');
+kontainerBtn.addEventListener('click', function(event){
+    displayBtn.innerText = `yu klik tombol: ${event.target.innerText}`;
+})
