@@ -44,6 +44,7 @@ body {
     column-gap: 40px;
     grid-template-columns: 20px 20px 20px;
     justify-content: center;
+    justify-items: center;
 }
 
 .number>button {
