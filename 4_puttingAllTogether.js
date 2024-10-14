@@ -1,7 +1,9 @@
 // -- DOM
 
+// DOM merepresentasikan halaman web.
 // cara JS berinteraksi dengan html dan css = DOM
 // DOM berisi banyak objek dan method yg dapat dipanggil pakai js utk mempengaruhi html css
+// window adalah part dari DOM
 
 // mari kita coba dengan 4_dom.html, 4_dom.css
 
@@ -28,7 +30,9 @@ background-color (css) --> backgroundColor (js)
 let targetJS = document.querySelectorAll('.target');
 for (let i=0;i<targetJS.length;i++){
     let elementNow = targetJS[i];
-    elementNow.innerText = 'koniciwa dengan javascript'; 
+   // elementNow.innerText = 'koniciwa dengan javascript'; 
+    elementNow.innerText = `koniciwa dengan javascript ${i}`; 
+
 };
 
 // --- Adding events dan listeners
