@@ -1,0 +1,42 @@
+/* css reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF8F3;
+}
+
+/* --------------------------------------- */
+
+.body-kalc {
+    width: 60%;
+    display: grid;
+    grid-template-areas:
+    'display display display'
+    'number number operator'
+    'number number operator'
+    'number number operator'
+    ;
+}
+
+
+.display {
+    grid-area: display;
+    border: 3px solid black;
+    margin: 5px 5px;
+}
+
+.operator {
+    grid-area: operator;
+    border: 3px solid black;
+    margin: 5px 5px;
+}
+
+.number {
+    grid-area: number;
+    border: 3px solid black;
+    margin: 5px 5px;
+}
+
+/* pake grid  */
