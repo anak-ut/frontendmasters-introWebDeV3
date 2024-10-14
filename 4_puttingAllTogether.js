@@ -68,9 +68,24 @@ typecolor.addEventListener('keyup', function(){
 // --- event delegation
 
 // daripada menaruh listener di tiap tiap element, taruh saja di parentnya
-// event bubblin : ketika event mengenai elemen, dia akan merambat naik ke parent, ke parent diatasnya lagi, dan sampai ke elemen utama(root)
+// event bubbling : ketika event mengenai elemen, dia akan merambat naik ke parent, ke parent diatasnya lagi, dan sampai ke elemen utama(root)
 let kontainerBtn = document.querySelector('.kontainer-button');
 let displayBtn = document.querySelector('.display-btn');
 kontainerBtn.addEventListener('click', function(event){
     displayBtn.innerText = `yu klik tombol: ${event.target.innerText}`;
-})
+});
+
+// contoh lain event bubbling ( saus: v0.dev ai)
+// contoh terjelas
+// penjelasan: yang diklik si anak, tertrigger ayah dan kakek (parents)
+document.getElementById('kakek').addEventListener('click', function(e) {
+    console.log('Kakek di-klik!');
+});
+
+document.getElementById('ayah').addEventListener('click', function(e) {
+    console.log('Ayah di-klik!');
+});
+
+document.getElementById('anak').addEventListener('click', function(e) {
+    console.log('Anak di-klik!');
+});

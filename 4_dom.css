@@ -23,3 +23,8 @@
 .kontainer-button {
     margin-top: 30px;
 }
+
+#kakek:hover {
+    color: red;
+    cursor: pointer;
+}
