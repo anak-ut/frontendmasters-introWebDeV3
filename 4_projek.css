@@ -33,10 +33,27 @@ body {
     margin: 5px 5px;
 }
 
+/* layout number */
 .number {
     grid-area: number;
     border: 3px solid black;
     margin: 5px 5px;
+    padding: 5px 5px;
+    display: grid;
+    row-gap: 15px;
+    column-gap: 40px;
+    grid-template-columns: 20px 20px 20px;
+    justify-content: center;
 }
 
+.number>button {
+    background-color: #D8D9DB;
+    width: 40px;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+
+}
+/* --------------------------------------  */
 /* pake grid  */
