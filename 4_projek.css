@@ -31,7 +31,6 @@ body {
 .operator {
     display: grid;
     grid-area: operator;
-    border: 3px solid black;
     margin: 5px 5px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
@@ -39,24 +38,17 @@ body {
 /* layout number */
 .number {
     grid-area: number;
-    border: 3px solid black;
-    margin: 5px 5px;
-    padding: 5px 5px;
     display: grid;
-    row-gap: 15px;
-    column-gap: 40px;
     justify-content: center;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
-.number>button {
-    background-color: #D8D9DB;
-    width: 40px;
+button {
+    width: 60px;
     align-content: center;
     align-items: center;
-    padding: 5px;
-    margin: 5px;
+    margin: 1px;
 
 }
 /* --------------------------------------  */
