@@ -9,6 +9,7 @@ body {
 
 /* --------------------------------------- */
 
+/* body-kal adalah parent dari display, operator, number*/
 .body-kalc {
     width: 60%;
     display: grid;
@@ -28,9 +29,11 @@ body {
 }
 
 .operator {
+    display: grid;
     grid-area: operator;
     border: 3px solid black;
     margin: 5px 5px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 /* layout number */
@@ -42,9 +45,9 @@ body {
     display: grid;
     row-gap: 15px;
     column-gap: 40px;
-    grid-template-columns: 20px 20px 20px;
     justify-content: center;
     justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .number>button {
