@@ -51,10 +51,24 @@ table {
 }
 /* ---------------- css reset ---------------------  */
 .kontainer {
-	width: 17vh;
+	display: grid;
+	border: 2px solid blue;
+	min-width: 38vh;
+	max-width: 45vh;
+	width: 100%;
+	grid-template-rows: 1fr 1fr;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 
 }
-
+.display {
+	border-radius: 2px 2px 2px 2px;
+	background-color: #553D36;
+	border: 2px solid red;
+	height: 10vh;
+}
 .frame {
 	padding: 1vh;
 	border-radius: 0px 0px 10px 10px;
@@ -63,7 +77,7 @@ table {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	row-gap: 1vh;
 	column-gap: 1vh;
-
+	border: 2px solid red;
 }
 
 .item {
