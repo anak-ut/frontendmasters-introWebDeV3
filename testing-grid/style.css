@@ -51,33 +51,40 @@ table {
 }
 /* ---------------- css reset ---------------------  */
 .kontainer {
-	display: grid;
-	border: 2px solid blue;
-	min-width: 38vh;
-	max-width: 45vh;
+	padding: 2vh;
+	min-width: 18vh;
+	max-width: 20vh;
 	width: 100%;
-	grid-template-rows: 1fr 1fr;
 	position: absolute;
+	grid-template-columns: 1fr 1fr;
 	top:50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	background-color: #553D36;
+	border-radius: 10px;
 
 }
 .display {
-	border-radius: 2px 2px 2px 2px;
-	background-color: #553D36;
-	border: 2px solid red;
-	height: 10vh;
+	border-radius: 4px 4px 4px 4px;
+	background-color: #819399;
+	height: 5vh;
+	margin-bottom: 2vh;
+	text-align: right;
+	padding: 3px;
+	font-size: 3vh;
+}
+
+p{
+	font-family: monospace;
+	align-items: center;
 }
 .frame {
-	padding: 1vh;
+	/* padding: 1vh; */
 	border-radius: 0px 0px 10px 10px;
-	background-color: #553D36;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	row-gap: 1vh;
 	column-gap: 1vh;
-	border: 2px solid red;
 }
 
 .item {
@@ -85,12 +92,14 @@ table {
 	background-color: #857885;
 	border-radius: 5px;
 	text-align: center;
+	width: 50%;
 }
 
 .itemeq {
 	grid-column: 2 / span 2;
 	grid-row: 4;
 	background-color: #8fd694;
+	width: 80%;
 }
 
 .op {
