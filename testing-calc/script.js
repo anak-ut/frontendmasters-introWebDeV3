@@ -11,13 +11,13 @@ frame.addEventListener('click', function(event){
 
     if (!action) {
         angkaAction(keyContent);
-        console.log('angka tertekan');
-    } else if (action === 'plus') {
-        operatorAction('plus');
-        console.log('operator tertekan');
+        // console.log('angka tertekan');
+    } else if (action === '+') {
+        operatorAction('+');
+        // console.log('operator tertekan');
     } else if (action === 'equal') {
         hitung();
-        console.log(' = tertekan');
+        // console.log(' = tertekan');
     }
 });
 
@@ -40,7 +40,7 @@ function operatorAction(op) {
 
 function hitung() {
     let hasil = 0;
-    if (operator === 'plus') {
+    if (operator === '+') {
         hasil = parseFloat(box1) + parseFloat(box2);  // Melakukan penjumlahan
     }
     console.log('Hasil:', hasil);
