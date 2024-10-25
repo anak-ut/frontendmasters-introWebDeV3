@@ -1,8 +1,9 @@
 let frame = document.querySelector('.frame');
-let ceKelas = document.getElementsByClassName('number');
+let displayCalc = document.querySelector('.display');
 let box1 = '';  // Menyimpan angka pertama
 let box2 = '';  // Menyimpan angka kedua
 let operator = '';  // Menyimpan operator
+let hasil = 0;
 
 frame.addEventListener('click', function(event){
     let key = event.target;
@@ -11,13 +12,18 @@ frame.addEventListener('click', function(event){
 
     if (!action) {
         angkaAction(keyContent);
+        displayCalc.innerText = `${key.innerText}`;
         // console.log('angka tertekan');
     } else if (action === '+') {
         operatorAction('+');
         // console.log('operator tertekan');
+        displayCalc.innerText = `${key.innerText}`;
+
     } else if (action === 'equal') {
         hitung();
         // console.log(' = tertekan');
+        displayCalc.innerText = `${hasil}`;
+
     }
 });
 
@@ -39,7 +45,6 @@ function operatorAction(op) {
 }
 
 function hitung() {
-    let hasil = 0;
     if (operator === '+') {
         hasil = parseFloat(box1) + parseFloat(box2);  // Melakukan penjumlahan
     }
