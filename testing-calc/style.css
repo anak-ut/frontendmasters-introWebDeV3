@@ -73,42 +73,21 @@ table {
     height: 14vh;
     display: grid;
     gap: 0;
-    grid-template-columns: 1fr 1fr 4fr;
-    grid-template-areas:
-    'c d p'
-    'a b p'
-    '. e p ';
+    grid-template-columns: 1fr 1fr;
 }
 
-.number1 {
-    grid-area: a;
-}
-
-.number2 {
-    grid-area: b;
-}
-
-.number3 {
-    grid-area: c;
-}
-
-.number4 {
-    grid-area: d;
-}
 
 button {
-    min-width: 3vh;
-    max-width: 5vh;
 }
 
-.equal {
+.op {
     background-color: orange;
-    grid-area: e;
 }
 
+.clear {
+    background-color: aquamarine;
+}
 .plus {
     background-color: yellow;
-    grid-area: p;
-    width: 10%;
-    height: 70%;
+
 }

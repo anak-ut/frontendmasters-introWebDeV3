@@ -9,12 +9,13 @@ frame.addEventListener('click', function(event){
     let key = event.target;
     let action = key.dataset.action;
     let keyContent = key.textContent;
+    let varElement = document.querySelector('.op');
 
     if (!action) {
         angkaAction(keyContent);
         displayCalc.innerText = `${key.innerText}`;
         // console.log('angka tertekan');
-    } else if (action === '+') {
+    } else if (action ) {
         operatorAction('+');
         // console.log('operator tertekan');
         displayCalc.innerText = `${key.innerText}`;
