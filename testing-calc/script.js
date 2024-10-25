@@ -73,9 +73,15 @@ function calculate() {
     firstNumber = result.toString();
     secondNumber = '';
     operator = '';
-    result = 0;
-   }
 }
+}
+
+function clearCalculator(){
+    firstNumber = '';
+    secondNumber = '';
+    operator = '';
+    result = 0;
+} 
 
 function updateDisplay() {
     if (result !== 0){
