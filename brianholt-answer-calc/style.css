@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*css reset*/
+
 .calc {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -5,6 +12,11 @@
 }
 
 .screen {
-    background-color: rgb(241, 241, 241);
+    color: #efefef;
+    background-color: rgba(0, 0, 0, 0.52);
+    font-size: 1.2rem;
+    font-family: monospace;
+    text-align: right;
+    padding:20px 50px;
 
 }
