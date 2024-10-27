@@ -14,9 +14,34 @@
 .screen {
     color: #efefef;
     background-color: rgba(0, 0, 0, 0.52);
-    font-size: 1.2rem;
+    font-size: 40px;
     font-family: monospace;
     text-align: right;
     padding:20px 50px;
+}
 
+.calc-button {
+    background-color: #d8d9db;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    cursor: pointer;
+    &:hover {
+        background-color: #eceef1;
+    }
+    &:active {
+        background-color: #bbbcbe;
+        box-shadow:2px 2px 5px  #bbbcbe;
+    }
+}
+
+.double {
+    width: 49.4%;
+}
+
+.triple {
+    width: 74.4%;
 }
