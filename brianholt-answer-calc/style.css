@@ -39,9 +39,14 @@
 }
 
 .double {
-    width: 49.4%;
+    width: 49.5%;
 }
 
 .triple {
-    width: 74.4%;
+    width: 74.5%;
+}
+
+.calc-button:last-child {
+    background-color: #dfb07e;
+    color: whitesmoke;
 }
