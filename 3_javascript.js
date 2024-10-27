@@ -28,7 +28,7 @@ console.log(awal);
 console.log(!awal);
 let value = 12;
 let latinValue = '12'
-console.log(` 12 == '12' is ${value==latinValue} and 2 === '2' is ${value===latinValue}`)
+console.log(` 12 == '12' is ${value===latinValue} and 2 === '2' is ${value===latinValue}`)
 
 //number
 // jika bahasa laen memisahkan antara floatong dan integer,
@@ -293,7 +293,7 @@ const days = [
 // arrays punya banyak method. antara lain length dan join
 for (let i=0;i<days.length;i++){
     console.log(i, days[i]);
-};
+}
 
 console.log(days.join('-'));
 
