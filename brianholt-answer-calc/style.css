@@ -1,0 +1,10 @@
+.calc {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 4px solid black;
+}
+
+.screen {
+    background-color: rgb(241, 241, 241);
+
+}
