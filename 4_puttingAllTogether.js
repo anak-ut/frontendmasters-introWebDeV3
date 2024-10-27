@@ -33,7 +33,7 @@ for (let i=0;i<targetJS.length;i++){
    // elementNow.innerText = 'koniciwa dengan javascript'; 
     elementNow.innerText = `koniciwa dengan javascript ${i}`; 
 
-};
+}
 
 // --- Adding events dan listeners
 
@@ -78,14 +78,8 @@ kontainerBtn.addEventListener('click', function(event){
 // contoh lain event bubbling ( saus: v0.dev ai)
 // contoh terjelas
 // penjelasan: yang diklik si anak, tertrigger ayah dan kakek (parents)
-document.getElementById('kakek').addEventListener('click', function(e) {
-    console.log('Kakek di-klik!');
-});
+document.getElementById('kakek').addEventListener('click',e => console.log('Kakek di-klik!'));
 
-document.getElementById('ayah').addEventListener('click', function(e) {
-    console.log('Ayah di-klik!');
-});
+document.getElementById('ayah').addEventListener('click',e => console.log('Ayah di-klik!'));
 
-document.getElementById('anak').addEventListener('click', function(e) {
-    console.log('Anak di-klik!');
-});
+document.getElementById('anak').addEventListener('click',e => console.log('Anak di-klik!'));
