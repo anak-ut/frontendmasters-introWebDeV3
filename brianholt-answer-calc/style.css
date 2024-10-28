@@ -5,22 +5,33 @@
   body {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   
   .calc {
+    display: flex;
+    flex-direction: column;
     width: 400px;
-    background-color: black;
+    /* background-color: black; */
     color: white;
+    border: 5px solid blue;
   }
   
   .screen {
-    color: white;
+    width: 100%;
+    color: rgb(194, 183, 183);
+    background-color: #ebebeb;
     font-size: 40px;
     font-family: "Courier New", Courier, monospace;
     text-align: right;
     padding: 20px 5px;
   }
-  
+  .calc-buttons {
+    width: 100%;
+  }
   .calc-button {
     background-color: #d8d9db;
     color: black;
