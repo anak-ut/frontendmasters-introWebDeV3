@@ -7,7 +7,7 @@
 
 .calc {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
     border: 4px solid black;
 }
 
@@ -39,14 +39,22 @@
 }
 
 .double {
-    width: 49.5%;
+    width: 49.4%;
 }
 
 .triple {
-    width: 74.5%;
+    width: 74.3%;
 }
 
 .calc-button:last-child {
     background-color: #dfb07e;
     color: whitesmoke;
+    &:hover {
+        background-color: #f7b773;
+    }
+    &:active {
+        background-color: #dd8d37;
+        box-shadow: 2px 2px 5px #b36e25;
+    }
 }
+
