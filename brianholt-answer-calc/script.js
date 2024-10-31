@@ -26,7 +26,7 @@ function handleNumber(number){
     } else {
         buffer += number;
     }
-    console.log(buffer);
+    // console.log(typeof(buffer));
 }
 
 function handleSymbol(symbol){
