@@ -38,3 +38,5 @@ function rerender(){
 }
 
 init();
+
+// menit 17:33
