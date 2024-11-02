@@ -5,17 +5,20 @@ const screen =  document.querySelector('.screen');
 const button = document.querySelector('.calc-buttons');
 
 function init(){
-    button.addEventListener('click', event => buttonClick(event.target.innerText))
+    button.addEventListener('click', event => {buttonClick(event.target.innerText); 
+        console.log(event.target);
+        console.log(typeof(event.target.innerText));
+
+    })
 }
 
 function buttonClick(value){
-    console.log(value);
     if (isNaN(parseInt(value))){
         handleSymbol(value);
-        console.log('ini simbol');
+        console.log('ini simbol', value);
     } else {
         handleNumber(value);
-        console.log('ini number');
+        console.log('ini number', value);
     }
     rerender();
 }
