@@ -10,6 +10,7 @@ function init(){
         console.log(typeof(event.target.innerText));
 
     })
+    //rerender();
 }
 
 function buttonClick(value){
