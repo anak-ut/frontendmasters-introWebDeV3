@@ -34,9 +34,26 @@ function handleNumber(number){
 
 function handleSymbol(symbol){
     switch (symbol){
-        case 'clear':
+        case 'clear' :
             buffer= '0';
             break;
+        case '<-' :
+            console.log('delete pressed');
+            break;
+        case '=' :
+            console.log('equal pressed');
+            break;
+        case '+' :
+            console.log('add pressed');
+            break;
+        case '-' :
+            console.log('minus pressed');
+            break;
+        case 'x' :
+            console.log('multiply pressed');
+            break;
+        default :
+            console.log('divison pressed');
     }
 }
 
