@@ -33,13 +33,18 @@ function handleNumber(number){
 }
 
 function handleSymbol(symbol){
-
+    switch (symbol){
+        case 'clear':
+            buffer= '0';
+            break;
+    }
 }
 
 function rerender(){
     screen.innerText = buffer;
 }
 
+
+
 init();
 
-// menit 17:33
