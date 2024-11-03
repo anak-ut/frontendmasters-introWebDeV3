@@ -1,13 +1,13 @@
-let runningTotal =0;
+let runningTotal = 0;
 let buffer = '0';
-let previousOperator;
+let previousOperator ;
 const screen =  document.querySelector('.screen');
 const button = document.querySelector('.calc-buttons');
 
 function init(){
     button.addEventListener('click', event => {buttonClick(event.target.innerText); 
-        console.log(event.target);
-        console.log(typeof(event.target.innerText));
+        //console.log(event.target);
+        //console.log(typeof(event.target.innerText));
 
     })
     //rerender();
@@ -16,10 +16,10 @@ function init(){
 function buttonClick(value){
     if (isNaN(parseInt(value))){
         handleSymbol(value);
-        console.log('ini simbol', value);
+        //console.log('ini simbol', value);
     } else {
         handleNumber(value);
-        console.log('ini number', value);
+        //console.log('ini number', value);
     }
     rerender();
 }
@@ -35,7 +35,15 @@ function handleNumber(number){
 
 
 function flushOperation(intBuffer){
-    if (previousOperator === '+')
+    if (previousOperator === '+'){
+        runningTotal += intBuffer;
+    } else if (previousOperator === '-'){
+        runningTotal -= intBuffer;
+    } else if(previousOperator === 'x'){
+        runningTotal *= intBuffer;
+    } else {
+        runningTotal /= intBuffer;
+    }
 }
 
 function handleMath(value){
@@ -43,21 +51,24 @@ function handleMath(value){
         return;
     }
     const intBuffer = parseInt(buffer);
-    if (runningTotal ===0){
-        runningTotal =intBuffer;
+    if (runningTotal === 0){
+        runningTotal = intBuffer;
     } else {
         flushOperation(intBuffer);
     }
     previousOperator = value;
     buffer = '0';
+    console(runningTotal);
+    console.log(value)
 }
 
 function handleSymbol(symbol){
     switch (symbol){
         case 'clear' :
-            buffer= '0';
+            console.log('clear pressed')
+            buffer = '0';
             break;
-        case '<-' :
+        case '←' :
             console.log('delete pressed');
             if (buffer.length === 1){
                 buffer = '0';
@@ -67,6 +78,10 @@ function handleSymbol(symbol){
             break;
         case '=' :
             console.log('equal pressed');
+            if (previousOperator === null){
+                return;
+            } 
+            flushOperation(parseInt(buffer));
             break;
         case '+' :
             console.log('add pressed');
