@@ -33,6 +33,25 @@ function handleNumber(number){
     // console.log(typeof(buffer));
 }
 
+
+function flushOperation(intBuffer){
+    if (previousOperator === '+')
+}
+
+function handleMath(value){
+    if (buffer === '0'){
+        return;
+    }
+    const intBuffer = parseInt(buffer);
+    if (runningTotal ===0){
+        runningTotal =intBuffer;
+    } else {
+        flushOperation(intBuffer);
+    }
+    previousOperator = value;
+    buffer = '0';
+}
+
 function handleSymbol(symbol){
     switch (symbol){
         case 'clear' :
@@ -56,6 +75,7 @@ function handleSymbol(symbol){
             console.log('minus pressed');
             break;
         case 'x' :
+            handleMath(symbol);
             console.log('multiply pressed');
             break;
         default :
