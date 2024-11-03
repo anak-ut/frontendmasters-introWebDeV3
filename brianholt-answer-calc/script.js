@@ -74,13 +74,14 @@ function handleSymbol(value){
             }
             break;
         case '=' :
-            console.log('equal pressed');
+            //console.log('equal pressed');
             if (previousOperator === null){
                 return;
             } 
             flushOperation(parseInt(buffer));
             previousOperator = null;
             buffer = '' + runningTotal;
+            runningTotal = 0;
             break;
         case '+' :
         case '-' :
