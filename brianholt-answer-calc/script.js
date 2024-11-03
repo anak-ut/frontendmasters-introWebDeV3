@@ -80,7 +80,7 @@ function handleSymbol(value){
             } 
             flushOperation(parseInt(buffer));
             previousOperator = null;
-            buffer = +runningTotal;
+            buffer = '' + runningTotal;
             break;
         case '+' :
         case '-' :
