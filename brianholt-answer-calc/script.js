@@ -1,6 +1,6 @@
 let runningTotal = 0;
 let buffer = '0';
-let previousOperator ;
+let previousOperator = null;
 const screen =  document.querySelector('.screen');
 const button = document.querySelector('.calc-buttons');
 
@@ -10,7 +10,7 @@ function init(){
         //console.log(typeof(event.target.innerText));
 
     })
-    //rerender();
+    rerender();
 }
 
 function buttonClick(value){
@@ -41,7 +41,7 @@ function flushOperation(intBuffer){
         runningTotal -= intBuffer;
     } else if(previousOperator === 'x'){
         runningTotal *= intBuffer;
-    } else {
+    } else if (previousOperator === ':'){
         runningTotal /= intBuffer;
     }
 }
@@ -58,18 +58,18 @@ function handleMath(value){
     }
     previousOperator = value;
     buffer = '0';
-    console(runningTotal);
+    console.log(runningTotal);
     console.log(value)
 }
 
 function handleSymbol(symbol){
     switch (symbol){
         case 'clear' :
-            console.log('clear pressed')
+            //console.log('clear pressed')
             buffer = '0';
             break;
         case '←' :
-            console.log('delete pressed');
+            //console.log('delete pressed');
             if (buffer.length === 1){
                 buffer = '0';
             } else {
@@ -84,17 +84,12 @@ function handleSymbol(symbol){
             flushOperation(parseInt(buffer));
             break;
         case '+' :
-            console.log('add pressed');
-            break;
         case '-' :
-            console.log('minus pressed');
-            break;
         case 'x' :
+        case ':' :
             handleMath(symbol);
             console.log('multiply pressed');
             break;
-        default :
-            console.log('divison pressed');
     }
 }
 
