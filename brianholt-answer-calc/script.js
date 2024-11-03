@@ -9,8 +9,7 @@ function init(){
         //console.log(event.target);
         //console.log(typeof(event.target.innerText));
 
-    })
-    rerender();
+    });
 }
 
 function buttonClick(value){
@@ -58,12 +57,10 @@ function handleMath(value){
     }
     previousOperator = value;
     buffer = '0';
-    console.log(runningTotal);
-    console.log(value)
 }
 
-function handleSymbol(symbol){
-    switch (symbol){
+function handleSymbol(value){
+    switch (value){
         case 'clear' :
             //console.log('clear pressed')
             buffer = '0';
@@ -82,12 +79,14 @@ function handleSymbol(symbol){
                 return;
             } 
             flushOperation(parseInt(buffer));
+            previousOperator = null;
+            buffer = +runningTotal;
             break;
         case '+' :
         case '-' :
         case 'x' :
         case ':' :
-            handleMath(symbol);
+            handleMath(value);
             console.log('multiply pressed');
             break;
     }
