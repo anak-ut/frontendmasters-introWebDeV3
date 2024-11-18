@@ -98,7 +98,28 @@ async function addDog() {
   const prosesRespon = await janji.json();
   const img = document.createElement('img');
   img.src = prosesRespon.message;
-  console.log(img.src);
   img.alt = 'kyut dog';
   dogDisplay.appendChild(img);
 }
+document.getElementById('dog-btn').addEventListener('click', addDog);
+
+// keyword await hanya bisa digunakan di dalam fungsi async.
+// jadi berikan keyword async dulu ke fungsi yang akan diberi await
+// await = tell your code to wait or pause until they finished that job
+// contoh :
+
+/*
+function getName(){
+  return 'brian';
+}
+console.log(`a promise ${getName()}`);
+*/
+// output : a promise brian
+// hanya string biasa
+
+// sedangkan jika fungsi getName diberi async akan return promise
+async function getname(){
+  return 'brian';
+}
+console.log(`output : ${getName()}`)
+// output : output : [object Promise]
