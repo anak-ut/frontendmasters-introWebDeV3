@@ -40,6 +40,7 @@ metodnya dapat merekues ke komputer utk mendapatkan informasi
  const DOG_URL = "https://dog.ceo/api/breeds/image/random";
  const dogDisplay = document.getElementById('dog-target');
 
+ /*
  function addDog(){
     const asu = fetch(DOG_URL);
     // console.log(asu);
@@ -61,13 +62,13 @@ metodnya dapat merekues ke komputer utk mendapatkan informasi
       alert('it is error !')
     });
     }
-
- document.getElementById('dog-btn').addEventListener('click', addDog);
-
+    document.getElementById('dog-btn').addEventListener('click', addDog);
+    
+    */
  /*
  menggunakan response.text
  
- function addNewDoggo() {
+ function addDog() {
   const promise = fetch(DOG_URL);
   promise
     .then(function (response) {
@@ -88,3 +89,16 @@ metodnya dapat merekues ke komputer utk mendapatkan informasi
 // kita harus melakukan JSON.parse
 // ketika response yang diambil adalah response.json(), kita
 // tidak perlu lagi melakukan parsing dan langsung memanfaatkannya
+
+// selain kode diatas, kita dpat menggunakan async await alih alih
+// menggunakan banyak chaining .then dan .then
+
+async function addDog() {
+  const janji = await fetch(DOG_URL);
+  const prosesRespon = await janji.json();
+  const img = document.createElement('img');
+  img.src = prosesRespon.message;
+  console.log(img.src);
+  img.alt = 'kyut dog';
+  dogDisplay.appendChild(img);
+}
