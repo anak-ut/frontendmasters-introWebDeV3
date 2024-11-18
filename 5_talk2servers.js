@@ -42,20 +42,24 @@ metodnya dapat merekues ke komputer utk mendapatkan informasi
 
  function addDog(){
     const asu = fetch(DOG_URL);
-    console.log(asu);
+    // console.log(asu);
     asu.then(function (response){
-        const processPromise = response.text();
-        return processPromise;
+      // const proccesingPromise = response.text();
+      const processingAnotherPromise = response.json();
+      // return proccesingPromise;
+      console.log(processingAnotherPromise);
+      return processingAnotherPromise;
     })
-    .then(function (proccedResponse){
-        const dogObject = JSON.parse(proccedResponse);
-        const img = document.createElement('img');
-        img.src = dogObject.message;
-        img.alt = 'anjenk';
-        dogDisplay.innerHTML = '';
-        console.log(dogDisplay);
-        dogDisplay.append(img);
+    .then(function(processedResponse){
+      // const dogObj = JSON.parse(processedResponse);
+      const img = document.createElement('img');
+     // img.src = dogObj.message;
+     img.src = processedResponse.message;
+      img.alt = 'cute dog';
+      dogDisplay.appendChild(img);
+    }).catch(function(error){
+      alert('it is error !')
     });
- }
+    }
 
  document.getElementById('dog-btn').addEventListener('click', addDog);
