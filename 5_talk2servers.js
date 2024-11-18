@@ -63,3 +63,28 @@ metodnya dapat merekues ke komputer utk mendapatkan informasi
     }
 
  document.getElementById('dog-btn').addEventListener('click', addDog);
+
+ /*
+ menggunakan response.text
+ 
+ function addNewDoggo() {
+  const promise = fetch(DOG_URL);
+  promise
+    .then(function (response) {
+    const processingPromise = response.text();
+    return processingPromise;
+  })
+    .then(function (processedResponse) {
+    const dogObject = JSON.parse(processedResponse);
+    const img = document.createElement("img");
+    img.src = dogObject.message;
+    img.alt = "Cute doggo";
+    doggos.appendChild(img);
+  });
+}
+  */
+
+// bedanya adalah ketika kita menggunakan response.text(),
+// kita harus melakukan JSON.parse
+// ketika response yang diambil adalah response.json(), kita
+// tidak perlu lagi melakukan parsing dan langsung memanfaatkannya
