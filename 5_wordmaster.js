@@ -1,7 +1,7 @@
 const SECRETWORD = 'unzip';
 const parsedSECRETWORD = [...SECRETWORD];
 
-let myInput = 'konto';
+let myInput = 'zipon';
 
 function cekWord(huruf) {
     let newHuruf = [...huruf];
@@ -11,11 +11,11 @@ function cekWord(huruf) {
     let result = [];
     for (let i=0;i<5;i++){
         if (newHuruf[i] === parsedSECRETWORD[i]){
-            result.push(`huruf ${newHuruf[i]} tepat di posisi ${i+1}`);
+            result.push(`${newHuruf[i]} <green>`);
         } else if (parsedSECRETWORD.includes(newHuruf[i])){
-            result.push(`huruf ${newHuruf[i]} ada dalam tebakan`);
+            result.push(`${newHuruf[i]} <yellow>`);
         } else {
-            result.push(`huruf ${newHuruf[i]} salah`)
+            result.push(`${newHuruf[i]} XXX`)
         }
     }
     return result;
