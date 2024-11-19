@@ -1,15 +1,26 @@
-const SECRETWORD= 'unzip';
+const SECRETWORD = 'unzip';
+const parsedSECRETWORD = [...SECRETWORD];
 
-const [a,b,c,d,e] = SECRETWORD;
-//console.log(`${a}, ${b}, ${c}, ${d}, ${e}`);
-let myInput = 'unzip';
-const [a1, b1,c1,d1,e1] = myInput;
+let myInput = 'konto';
 
-const cekCharInSECRETWORD = SECRETWORD.includes(...myInput);
-console.log(cekCharInSECRETWORD);
-
-if (a===a1 && b==b1 && c==c1 && d==d1 && e==e1){
-    console.log('menang .. hore !')
-} else {
-    console.log('kalah');
+function cekWord(huruf) {
+    let newHuruf = [...huruf];
+   if (newHuruf.join('') === SECRETWORD){
+    return 'tebakan benar. ANDA Menang !!'
+   } else {
+    let result = [];
+    for (let i=0;i<5;i++){
+        if (newHuruf[i] === parsedSECRETWORD[i]){
+            result.push(`huruf ${newHuruf[i]} tepat di posisi ${i+1}`);
+        } else if (parsedSECRETWORD.includes(newHuruf[i])){
+            result.push(`huruf ${newHuruf[i]} ada dalam tebakan`);
+        } else {
+            result.push(`huruf ${newHuruf[i]} salah`)
+        }
+    }
+    return result;
+   }
 }
+
+let testing = cekWord(myInput);
+console.log(testing);
