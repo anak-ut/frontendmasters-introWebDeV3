@@ -3,6 +3,30 @@ const ROUNDS = 3;
 const letters = document.querySelectorAll('.scoreboard-letter');
 const loadingDiv = document.querySelector('.info-bar');
 
+// koleksi fungsi2 yang dipanggil oleh init() :
+
+// deteksi dan buat objek key value letter-frekuensi
+// sifat objek : key selalu unik.
+function makeMap(array){
+    const obj = {};
+    for (let i=0;i<array.length;i++){
+        if (obj[array[i]]) {
+            obj[array[i]]++;
+        } else {
+            obj[array[i]]=1;
+        }
+    }
+    return obj;
+}
+
+// load the spinning ( disini dah diganti mobil maju mundur)
+function setLoading(isLoading){
+    loadingDiv.classList.toggle('hidden',!isLoading)
+}
+
+
+// ------------------------------------------------- //
+
 async function init(){
     let currentRow = 0;
     let currentGuess = '';
@@ -16,19 +40,36 @@ async function init(){
     const wordGuessParts = wordGuess.split('');
     console.log(wordGuessParts);
     isLoading = false;
-    // setLoading(isLoading);
+     setLoading(isLoading);
 
-    // users do guess
+    // users do guess per letter
     function addLetter(letter){
         if (currentGuess.length < ANSWERLEN){
             currentGuess += letter;
         } else {
-            current = currentGuess.substring(0,currentGuess.length-1)+letter;
+           let current = currentGuess.substring(0,currentGuess.length-1)+letter;
         }
         letters[currentRow * ANSWERLEN + currentGuess.length -1].innerText = letter;
     }
 
+    // try to enter a guess
+    function commit(){
+        if (currentGuess.length != ANSWERLEN){
+            return;
+        }
+    }
 
+    const guessParts = currentGuess.split('');
+    const map = makeMap(wordParts);
+    let allRight = true;
+
+// check correct letters pass#1
+for(let i=0;i<ANSWERLEN;i++){
+    if(guessParts[i] === wordGuessParts[i] ){
+        letters[currentRow * ANSWERLEN + 1].classList.add('correct');
+        map[guessParts[i]]--;
+    }
+}
 
 
 
