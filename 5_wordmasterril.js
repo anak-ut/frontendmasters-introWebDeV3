@@ -18,5 +18,71 @@ async function init(){
     isLoading = false;
     // setLoading(isLoading);
 
-    // user does guess
+    // users do guess
+    function addLetter(letter){
+        if (currentGuess.length < ANSWERLEN){
+            currentGuess += letter;
+        } else {
+            current = currentGuess.substring(0,currentGuess.length-1)+letter;
+        }
+        letters[currentRow * ANSWERLEN + currentGuess.length -1].innerText = letter;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
