@@ -71,6 +71,8 @@ for(let i=0;i<ANSWERLEN;i++){
     }
 }
 
+// pass#2 using map
+for (let i=)
 
 
 
