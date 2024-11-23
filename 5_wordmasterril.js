@@ -19,6 +19,12 @@ function makeMap(array){
     return obj;
 }
 
+// function alphabet checker letter using reges
+function isLetter(letter){
+    return /^[a-zA-Z]$/.test(letter);
+}
+
+
 // load the spinning ( disini dah diganti mobil maju mundur)
 function setLoading(isLoading){
     loadingDiv.classList.toggle('hidden',!isLoading)

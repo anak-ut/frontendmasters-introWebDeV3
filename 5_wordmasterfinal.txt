@@ -145,32 +145,4 @@ async function init() {
   });
 }
 
-// a little function to check to see if a character is alphabet letter
-// this uses regex (the /[a-zA-Z]/ part) but don't worry about it
-// you can learn that later and don't need it too frequently
-function isLetter(letter) {
-  return /^[a-zA-Z]$/.test(letter);
-}
-
-// show the loading spinner when needed
-function setLoading(isLoading) {
-  loadingDiv.classList.toggle("hidden", !isLoading);
-}
-
-// takes an array of letters (like ['E', 'L', 'I', 'T', 'E']) and creates
-// an object out of it (like {E: 2, L: 1, T: 1}) so we can use that to
-// make sure we get the correct amount of letters marked close instead
-// of just wrong or correct
-function makeMap(array) {
-  const obj = {};
-  for (let i = 0; i < array.length; i++) {
-    if (obj[array[i]]) {
-      obj[array[i]]++;
-    } else {
-      obj[array[i]] = 1;
-    }
-  }
-  return obj;
-}
-
 init();
