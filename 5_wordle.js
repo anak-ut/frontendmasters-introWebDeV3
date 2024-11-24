@@ -176,3 +176,6 @@ function makeMap(array) {
 }
 
 init();
+
+// let follow mister brian project breakdown
+// incoming episode : Project Javascript- loading state
