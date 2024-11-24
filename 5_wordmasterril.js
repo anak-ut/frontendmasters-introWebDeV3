@@ -63,88 +63,67 @@ async function init(){
         if (currentGuess.length != ANSWERLEN){
             return;
         }
+        
+        const guessParts = currentGuess.split('');
+        const map = makeMap(wordParts);
+        let allRight = true;
+        
+        // check correct letters pass#1
+        for(let i=0;i<ANSWERLEN;i++){
+            if(guessParts[i] === wordGuessParts[i] ){
+                letters[currentRow * ANSWERLEN + 1].classList.add('correct');
+                map[guessParts[i]]--;
+            }
+        }
+        
+        // pass#2 using map
+        for (let i=0; i< ANSWERLEN; i++){
+            if(guessParts[i] === wordGuessParts[i]){
+                // huruf guess tepat. do nothing
+            } else if(map[guessParts[i]] && map[guessParts[i]] > 0){
+                // tebakan hampir. diiterasi cekingnya sampe counter = 0
+                allRight = false;
+                letters[currentRow * ANSWERLEN + i].classList.add('close');
+                map[guessParts[i]]--;
+            } else {
+                //wrong
+                allRight=false;
+                letters[currentRow * ANSWERLEN + i].classList.add('wrong');
+            }
+        }
+        
+        currentRow++;
+        currentGuess= '';
+        if (allRight){
+            alert('congrats you won!');
+            document.querySelector('.brand').classList.add('winner');
+            done = true;
+        } else if (currentRow === ROUNDS){
+            alert(`you lose, the word was ${word}`);
+            done=true;
+        }
     }
-
-    const guessParts = currentGuess.split('');
-    const map = makeMap(wordParts);
-    let allRight = true;
-
-// check correct letters pass#1
-for(let i=0;i<ANSWERLEN;i++){
-    if(guessParts[i] === wordGuessParts[i] ){
-        letters[currentRow * ANSWERLEN + 1].classList.add('correct');
-        map[guessParts[i]]--;
-    }
+        
+function backspace(){
+    currentGuess = currentGuess.substring(0,currentGuess.length-1);
+    letters[currentGuess * ANSWERLEN + currentGuess.length].innerText= '';
 }
 
-// pass#2 using map
-for (let i=0;i<ANSWERLEN;i++){
-    if(guessParts[i] === wordGuessParts[i]){
-        // huruf guess tepat. do nothing
-    } else if(map[guessParts[i]] && map[guessParts[i]] > 0){
-        // tebakan hampir. diiterasi cekingnya sampe counter = 0
-        allRight = false;
-        letters[currentRow * ANSWERLEN + i].classList.add('close');
-        map[guessParts[i]]--;
+document.addEventListener('keydown',function handleKeyPress(event){
+    if (done || isLoading){
+        return;
+    }
+
+    const action = event.key;
+    if (action === 'Enter'){
+        commit();
+    } else if (action === 'Backspace'){
+        backspace();
+    } else if (isLetter(action)){
+        addLetter(action.toUpperCase());
     } else {
-        //wrong
-        allRight=false;
-        letters[currentRow * ANSWERLEN + i].classList.add('wrong');
+
     }
+});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+init();
