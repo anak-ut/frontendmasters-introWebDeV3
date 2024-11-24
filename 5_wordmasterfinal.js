@@ -57,7 +57,7 @@ async function init() {
     }
 
     const guessParts = currentGuess.split("");
-    const map = makeMap(wordParts);
+    const map = makeMap(wordParts); // map dari kata yang ditebak
     let allRight = true;
 
     // first pass just finds correct letters so we can mark those as

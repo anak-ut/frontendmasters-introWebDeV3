@@ -80,9 +80,16 @@ for(let i=0;i<ANSWERLEN;i++){
 // pass#2 using map
 for (let i=0;i<ANSWERLEN;i++){
     if(guessParts[i] === wordGuessParts[i]){
-
+        // huruf guess tepat. do nothing
     } else if(map[guessParts[i]] && map[guessParts[i]] > 0){
-        
+        // tebakan hampir. diiterasi cekingnya sampe counter = 0
+        allRight = false;
+        letters[currentRow * ANSWERLEN + i].classList.add('close');
+        map[guessParts[i]]--;
+    } else {
+        //wrong
+        allRight=false;
+        letters[currentRow * ANSWERLEN + i].classList.add('wrong');
     }
 }
 
