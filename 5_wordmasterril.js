@@ -78,7 +78,11 @@ for(let i=0;i<ANSWERLEN;i++){
 }
 
 // pass#2 using map
-for (let i=)
+for (let i=0;i<ANSWERLEN;i++){
+    if(guessParts[i] === wordGuessParts[i]){
+
+    } else if(map[guessParts[i]] && map[guessParts[i]] > 0)
+}
 
 
 
