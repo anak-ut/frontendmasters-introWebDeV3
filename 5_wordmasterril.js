@@ -81,7 +81,9 @@ for(let i=0;i<ANSWERLEN;i++){
 for (let i=0;i<ANSWERLEN;i++){
     if(guessParts[i] === wordGuessParts[i]){
 
-    } else if(map[guessParts[i]] && map[guessParts[i]] > 0)
+    } else if(map[guessParts[i]] && map[guessParts[i]] > 0){
+        
+    }
 }
 
 
