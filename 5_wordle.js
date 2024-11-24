@@ -15,6 +15,7 @@ async function init() {
   const res = await fetch("https://words.dev-apis.com/word-of-the-day");
   const { word: wordRes } = await res.json();
   const word = wordRes.toUpperCase();
+  console.log(word);
   const wordParts = word.split("");
   isLoading = false;
   setLoading(isLoading);
@@ -26,18 +27,20 @@ async function init() {
     } else {
       current = currentGuess.substring(0, currentGuess.length - 1) + letter;
     }
-
+    
     letters[currentRow * ANSWER_LENGTH + currentGuess.length - 1].innerText =
-      letter;
+    letter;
   }
-
+  
   // use tries to enter a guess
   async function commit() {
     if (currentGuess.length !== ANSWER_LENGTH) {
       // do nothing
       return;
     }
-
+    
+    currentRow ++;
+    currentGuess = "";
     // check the API to see if it's a valid word
     // skip this step if you're not checking for valid words
     isLoading = true;
@@ -88,8 +91,6 @@ async function init() {
       }
     }
 
-    currentRow++;
-    currentGuess = "";
     if (allRight) {
       // win
       alert("you win");
@@ -132,6 +133,7 @@ async function init() {
     }
 
     const action = event.key;
+    console.log(action);
 
     if (action === "Enter") {
       commit();
