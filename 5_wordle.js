@@ -15,7 +15,7 @@ async function init() {
   const res = await fetch("https://words.dev-apis.com/word-of-the-day");
   const { word: wordRes } = await res.json();
   const word = wordRes.toUpperCase();
-  console.log(word);
+  console.log(`this: ${word}`);
   const wordParts = word.split("");
   isLoading = false;
   setLoading(isLoading);
