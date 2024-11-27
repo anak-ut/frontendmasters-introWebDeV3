@@ -1,0 +1,16 @@
+.ball {
+  background-color: #7fffd4;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  display: flex;
+}
+/*# sourceMappingURL=index.4847c29d.css.map */
