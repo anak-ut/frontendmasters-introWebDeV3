@@ -1,5 +1,17 @@
 {
   "devDependencies": {
     "parcel": "^2.13.2"
-  }
+  },
+  "dependencies": {
+    "popmotion": "^11.0.5"
+  },
+  "name": "animate",
+  "version": "1.0.0",
+  "description": "percob",
+  "main": "6_thirdparty.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
